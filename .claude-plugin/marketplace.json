@@ -1,0 +1,19 @@
+{
+  "name": "nordelind-skills",
+  "owner": {
+    "name": "lindz0"
+  },
+  "metadata": {
+    "description": "Personal skills library by lindz0"
+  },
+  "plugins": [
+    {
+      "name": "nordelind-skills",
+      "source": {
+        "source": "github",
+        "repo": "lindz0/nordelind.skills"
+      },
+      "description": "Personal skills library – motorsport, Viaplay och mer"
+    }
+  ]
+}
