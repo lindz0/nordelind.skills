@@ -1,5 +1,5 @@
 {
-  "name": "nordelind-skills",
+  "name": "lindz0",
   "owner": {
     "name": "lindz0"
   },
@@ -10,8 +10,8 @@
     {
       "name": "nordelind-skills",
       "source": {
-        "source": "github",
-        "repo": "lindz0/nordelind.skills"
+        "source": "url",
+        "url": "https://github.com/lindz0/nordelind.skills.git"
       },
       "description": "Personal skills library – motorsport, Viaplay och mer"
     }
