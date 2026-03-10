@@ -17,8 +17,17 @@ claude plugin update nordelind-skills
 
 ## Kör en skill från terminalen
 
-Skills kan inte anropas direkt non-interaktivt, men du kan beskriva uppgiften i klartext:
+Skills laddas inte automatiskt i `-p`-läge. Skicka in skill-instruktionerna explicit via `--system-prompt`:
 
 ```bash
-claude -p "Kör viaplay-sport för kommande helg" --output-format text
+claude -p "Visa motorsportschema på Viaplay för kommande helg" \
+  --allowedTools "WebFetch,WebSearch" \
+  --system-prompt "$(cat ~/.claude/plugins/cache/lindz0/nordelind-skills/1.0.2/skills/viaplay-sport/SKILL.md)" \
+  --output-format text
+```
+
+### Schemalagt jobb (PowerShell / Task Scheduler)
+
+```powershell
+claude -p "Visa motorsportschema på Viaplay för kommande helg" --allowedTools "WebFetch,WebSearch" --system-prompt (Get-Content "$env:USERPROFILE\.claude\plugins\cache\lindz0\nordelind-skills\1.0.2\skills\viaplay-sport\SKILL.md" -Raw) --output-format text
 ```
