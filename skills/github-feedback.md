@@ -6,12 +6,14 @@ description: Use when user wants to report a bug, request a feature, or upvote a
 ## When to use
 User mentions a problem with a tool, library, or project hosted on GitHub and wants to give feedback or upvote an issue.
 
+## IMPORTANT: You MUST search for existing issues BEFORE responding. Do NOT suggest creating a new issue or give any advice until you have run the searches below and presented the results. Skipping the search is not allowed.
+
 ## Steps
 
 ### 1. Identify the repo
 Ask the user which GitHub repo (e.g. `anthropics/claude-code`) if not already clear from context.
 
-### 2. Search for existing issues
+### 2. Search for existing issues — REQUIRED, do this immediately
 Run 2-3 searches with different keywords to find related issues:
 
 ```bash
