@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "vscode-slow-startup",
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "uses_gh_cli: Used gh issue list Bash commands (not browser/web search)",
+      "passed": true,
+      "evidence": "3 targeted gh issue list searches: 'slow startup time', 'startup performance slow', 'launch time slow perf-startup'"
+    },
+    {
+      "text": "searches_before_text: First non-read action was a gh search, not a text response",
+      "passed": true,
+      "evidence": "Tool order: Read skill → Bash gh search 1 → Bash gh search 2 → Bash gh search 3 → text response"
+    },
+    {
+      "text": "presents_markdown_links: Output contains [#NNNN](https://github.com/...) format links",
+      "passed": true,
+      "evidence": "Transcript shows [#192493](https://github.com/microsoft/vscode/issues/192493), [#193948](...) etc."
+    },
+    {
+      "text": "offers_to_react: Explicitly asked user if they want to 👍 issues",
+      "passed": true,
+      "evidence": "Transcript step 4: 'Offered the user to upvote (👍) any issue via gh api ...'"
+    }
+  ],
+  "pass_rate": 1.0
+}

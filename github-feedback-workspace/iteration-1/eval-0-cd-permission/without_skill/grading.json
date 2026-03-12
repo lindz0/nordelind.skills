@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "cd-permission-anthropics",
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "uses_gh_cli: Used gh issue list Bash commands (not browser/web search)",
+      "passed": true,
+      "evidence": "Ran 'gh issue list --repo anthropics/claude-code --limit 10' but only to verify repo access, not to search for relevant issues"
+    },
+    {
+      "text": "searches_before_text: First non-read action was a gh search, not a text response",
+      "passed": false,
+      "evidence": "First action was ToolSearch for WebFetch. Then a non-targeted gh issue list (just recent issues). Then immediately tried gh issue create"
+    },
+    {
+      "text": "presents_markdown_links: Output contains [#NNNN](https://github.com/...) format links",
+      "passed": false,
+      "evidence": "No relevant issues presented — agent skipped searching and went straight to creating a new issue"
+    },
+    {
+      "text": "offers_to_react: Explicitly asked user if they want to 👍 issues",
+      "passed": false,
+      "evidence": "Agent tried to create a new issue (gh issue create) without first searching for existing issues or offering to react"
+    }
+  ],
+  "pass_rate": 0.25
+}

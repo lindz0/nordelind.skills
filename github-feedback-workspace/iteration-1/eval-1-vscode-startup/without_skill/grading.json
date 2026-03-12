@@ -1,0 +1,28 @@
+{
+  "eval_id": 1,
+  "eval_name": "vscode-slow-startup",
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "uses_gh_cli: Used gh issue list Bash commands (not browser/web search)",
+      "passed": true,
+      "evidence": "Used gh issue list with JSON fields to search for issues"
+    },
+    {
+      "text": "searches_before_text: First non-read action was a gh search, not a text response",
+      "passed": false,
+      "evidence": "First action was ToolSearch for WebFetch, then mkdir to create output dir, then gh searches — not gh first"
+    },
+    {
+      "text": "presents_markdown_links: Output contains [#NNNN](https://github.com/...) format links",
+      "passed": false,
+      "evidence": "Issues presented as '**#192493** - title (URL)' format — plain URL not markdown link [#NNNN](URL)"
+    },
+    {
+      "text": "offers_to_react: Explicitly asked user if they want to 👍 issues",
+      "passed": false,
+      "evidence": "Agent tried to post a reaction directly without asking the user (gh api POST reaction — blocked by sandbox)"
+    }
+  ],
+  "pass_rate": 0.25
+}

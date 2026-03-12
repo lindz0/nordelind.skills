@@ -1,0 +1,23 @@
+{
+  "skill_name": "github-feedback",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Jag vill ge feedback om ett permission problem - man måste godkänna cd:* för att git status ska fungera på repo anthropics/claude-code",
+      "expected_output": "Searches GitHub issues using gh CLI, presents matching issues with clickable markdown links, offers to react with thumbs up",
+      "files": []
+    },
+    {
+      "id": 1,
+      "prompt": "Can you help me find issues about slow startup time in microsoft/vscode? I want to upvote one if it exists.",
+      "expected_output": "Searches GitHub issues using gh CLI, presents matching issues with clickable markdown links, offers to react with thumbs up",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "There's a bug in neovim/neovim where code folding doesn't work properly with treesitter. I want to report it or upvote an existing issue.",
+      "expected_output": "Searches GitHub issues using gh CLI, presents matching issues with clickable markdown links, offers to react or create new issue",
+      "files": []
+    }
+  ]
+}

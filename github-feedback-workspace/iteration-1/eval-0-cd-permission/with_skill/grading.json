@@ -1,0 +1,28 @@
+{
+  "eval_id": 0,
+  "eval_name": "cd-permission-anthropics",
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "uses_gh_cli: Used gh issue list Bash commands (not browser/web search)",
+      "passed": true,
+      "evidence": "3 targeted gh issue list searches ran: 'permission cd git status', 'cd permission approve', 'cd git status permission prompt'"
+    },
+    {
+      "text": "searches_before_text: First non-read action was a gh search, not a text response",
+      "passed": true,
+      "evidence": "Tool order: Read skill → Bash (gh search 1+2 parallel) → Bash (gh search 3) → text response"
+    },
+    {
+      "text": "presents_markdown_links: Output contains [#NNNN](https://github.com/...) format links",
+      "passed": true,
+      "evidence": "Issues presented with #28240, #32985, #30409, #31523 linked format"
+    },
+    {
+      "text": "offers_to_react: Explicitly asked user if they want to 👍 issues",
+      "passed": true,
+      "evidence": "Transcript: 'User was asked if they want to 👍 any issues'"
+    }
+  ],
+  "pass_rate": 1.0
+}

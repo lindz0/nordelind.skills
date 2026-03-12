@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "neovim-treesitter-folding",
+  "configuration": "with_skill",
+  "assertions": [
+    {
+      "text": "uses_gh_cli: Used gh issue list Bash commands (not browser/web search)",
+      "passed": true,
+      "evidence": "3 targeted gh issue list searches: 'treesitter folding', 'code folding treesitter bug', 'foldexpr treesitter'"
+    },
+    {
+      "text": "searches_before_text: First non-read action was a gh search, not a text response",
+      "passed": true,
+      "evidence": "Tool order: Read skill → Bash gh searches → text response → mkdir → Write"
+    },
+    {
+      "text": "presents_markdown_links: Output contains [#NNNN](https://github.com/...) format links",
+      "passed": true,
+      "evidence": "Agent result shows [#32759](https://github.com/neovim/neovim/issues/32759), [#28692](...) etc."
+    },
+    {
+      "text": "offers_to_react: Explicitly asked user if they want to 👍 issues",
+      "passed": true,
+      "evidence": "Agent result: 'Would you like to give a thumbs up (👍) to any of these issues?'"
+    }
+  ],
+  "pass_rate": 1.0
+}

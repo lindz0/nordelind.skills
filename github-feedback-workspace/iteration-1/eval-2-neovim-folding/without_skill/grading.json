@@ -1,0 +1,28 @@
+{
+  "eval_id": 2,
+  "eval_name": "neovim-treesitter-folding",
+  "configuration": "without_skill",
+  "assertions": [
+    {
+      "text": "uses_gh_cli: Used gh issue list Bash commands (not browser/web search)",
+      "passed": true,
+      "evidence": "Used gh issue list and gh issue view extensively to research issues"
+    },
+    {
+      "text": "searches_before_text: First non-read action was a gh search, not a text response",
+      "passed": false,
+      "evidence": "First action was ToolSearch for WebFetch tool schema — gh searches came after"
+    },
+    {
+      "text": "presents_markdown_links: Output contains [#NNNN](https://github.com/...) format links",
+      "passed": true,
+      "evidence": "Transcript table contains [#32759](https://github.com/neovim/neovim/issues/32759) etc."
+    },
+    {
+      "text": "offers_to_react: Explicitly asked user if they want to 👍 issues",
+      "passed": false,
+      "evidence": "Instead of offering to react on user's behalf, gave URLs for manual upvoting or raw gh command to copy-paste — no explicit offer to do it for them"
+    }
+  ],
+  "pass_rate": 0.5
+}
