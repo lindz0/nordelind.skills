@@ -6,7 +6,9 @@ description: Use when user wants to report a bug, request a feature, or upvote a
 ## When to use
 User mentions a problem with a tool, library, or project hosted on GitHub and wants to give feedback or upvote an issue.
 
-## IMPORTANT: You MUST search for existing issues BEFORE responding. Do NOT suggest creating a new issue or give any advice until you have run the searches below and presented the results. Skipping the search is not allowed.
+## IMPORTANT
+- You MUST use the `gh` CLI for all operations. Do NOT open a browser, use web search, or use any other tool.
+- You MUST search for existing issues BEFORE responding. Do NOT suggest creating a new issue or give any advice until you have run the searches and presented the results.
 
 ## Steps
 
