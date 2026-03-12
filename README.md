@@ -12,7 +12,7 @@ claude plugin install nordelind-skills
 ## Update
 
 ```bash
-claude plugin update nordelind-skills
+claude plugin update nordelind-skills@lindz0
 ```
 
 ## Kör en skill från terminalen
